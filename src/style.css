@@ -1,1 +1,32 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.contenedor-cartas {
+  min-height: 100vh;
+  background: black;
+}
+
+.carta {
+  width: 15%;
+  height: 50vh;
+  border-radius: 10px !important;
+}
+
+div[class*="contenedor-icono"] {
+  width: 100%;
+  height: 15%;
+  padding: 10px;
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.icono {
+  height: 100%;
+}
+
+.contenedor-icono-abajo {
+  justify-content: right;
+}
+
+.card-number {
+  font-size: 100px;
+}
