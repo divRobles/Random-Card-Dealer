@@ -16,7 +16,6 @@ div[class*="contenedor-icono"] {
   height: 15%;
   padding: 10px;
   display: flex;
-  /* overflow: hidden; */
 }
 
 .icono {
