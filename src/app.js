@@ -40,7 +40,5 @@ window.onload = function() {
   </div>
   </div>
   `;
-
   container.innerHTML = carta;
-  console.log("Hello Rigo from the console!");
 };
