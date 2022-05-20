@@ -19,9 +19,33 @@
     />
   </head>
 
-  <body>
+  <body id="body">
+    <button type="button" class="boton-crear-carta btn btn-primary">
+      Crear Carta
+    </button>
+    <input
+      type="number"
+      class="boton-width"
+      placeholder="Define el width in px"
+    />
+    <input
+      type="number"
+      class="boton-height"
+      placeholder="Define el height in px"
+    />
+
     <div
       class="container-fluid d-flex justify-content-center align-items-center contenedor-cartas"
-    ></div>
+    >
+      <div class="card carta">
+        <div class="contenedor-icono-arriba"></div>
+        <div
+          class="card-body d-flex justify-content-center align-items-center "
+        >
+          <h5 class="card-number"></h5>
+        </div>
+        <div class="contenedor-icono-abajo"></div>
+      </div>
+    </div>
   </body>
 </html>
