@@ -9,6 +9,7 @@ const iconoCorazon = `♥`;
 const iconoPicas = `♠`;
 const iconoTrebol = `♣`;
 const iconoDiamante = `♦`;
+
 const numerosCartas = [1, 2, 3, 4, 5, 6, 7, 8, "J", "Q", "K"];
 const numeroSelect = numerosCartas[Math.floor(Math.random() * 11)];
 const iconos = [iconoCorazon, iconoPicas, iconoTrebol, iconoDiamante];
@@ -19,19 +20,28 @@ const contenedorIconoArriba = document.querySelector(
 );
 const cardNumber = document.querySelector(".card-number");
 const contenedorIconoAbajo = document.querySelector(".contenedor-icono-abajo");
-
-// contenedorIconoAbajo.innerHTML = `${iconoSlect}`;
-// contenedorIconoArriba.innerHTML = `${iconoSlect}`;
-// cardNumber.innerHTML = `${numeroSelect}`;
-
+const contenedoresIconos = [contenedorIconoAbajo, contenedorIconoArriba];
 const botonCrearCarta = document.querySelector(".boton-crear-carta");
 const botonWidth = document.querySelector(".boton-width");
 const botonHeight = document.querySelector(".boton-height");
+
+const estiloIcono = icono => {
+  if (icono === iconoCorazon) {
+    for (let contenedor in contenedoresIconos) {
+      contenedoresIconos[contenedor].style.color = "red";
+    }
+  } else {
+    for (let contenedor in contenedoresIconos) {
+      contenedoresIconos[contenedor].style.color = "black";
+    }
+  }
+};
 
 window.onload = function() {
   contenedorIconoAbajo.innerHTML = `${iconoSlect}`;
   contenedorIconoArriba.innerHTML = `${iconoSlect}`;
   cardNumber.innerHTML = `${numeroSelect}`;
+  estiloIcono(iconoSlect);
 };
 
 // // Boton crear carta
@@ -42,6 +52,7 @@ botonCrearCarta.addEventListener("click", e => {
   contenedorIconoAbajo.innerHTML = `${iconoSlect}`;
   contenedorIconoArriba.innerHTML = `${iconoSlect}`;
   cardNumber.innerHTML = `${numeroSelect}`;
+  estiloIcono(iconoSlect);
 });
 
 // // Timmer.
